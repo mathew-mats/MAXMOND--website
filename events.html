@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Events —  MAXMOND°</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <div class="logo">
+  <a href="index.html">
+        <img src="images/logo.png"  alt="Maxmond Logo" class="logo-img">
+      </a>
+</div>
+<div class="tag">Party Psychiatrist</div>
+  </div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="mixes.html" class="nav-link">Mixes</a>
+    <a href="events.html" class="nav-link active">Events</a>
+    <a href="merch.html" class="nav-link">Merch</a>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="events-hero">
+  <div class="events-hero-content">
+    <h1 class="neon">UPCOMING EVENTS</h1>
+    <p class="hero-subtitle">Join DJ MAXMOND° for electrifying performances across Kampala! From high-energy Afro beats to EDM nights, experience the best of local music culture.</p>
+  </div>
+</section>
+
+<main class="container">
+  <!-- Events grid -->
+  <section class="events-grid">
+    <div class="event-card">
+      <div class="event-icon">
+        <i class="fas fa-moon"></i>
+      </div>
+      <div class="event-header">
+        <h3>Bada Bing</h3>
+        <span class="event-frequency">Thursday Nights</span>
+      </div>
+      <div class="event-details">
+        <p class="location"><i class="fas fa-map-marker-alt"></i> Kyaliwajjala Namugongo</p>
+        <p class="description">High-energy Afro & EDM night with guest DJs. Party like never before! </p>
+      </div>
+      <a href="https://wa.me/256742141276?text=I%20want%20to%20book%20for%20Bada%20Bing" class="btn primary">Get Details</a>
+    </div>
+
+    <div class="event-card">
+      <div class="event-icon">
+        <i class="fas fa-water"></i>
+      </div>
+      <div class="event-header">
+        <h3>Lolli Fun Park</h3>
+        <span class="event-frequency">Fri Night & Sat Day</span>
+      </div>
+      <div class="event-details">
+        <p class="location"><i class="fas fa-map-marker-alt"></i> Akamwesi Mall, Kyebando</p>
+        <p class="description">Swim in the dark with unforgettable beats. Family-friendly vibes all day! </p>
+      </div>
+      <a href="https://wa.me/256742141276?text=I%20want%20to%20book%20for%20Lolli%20Fun%20Park" class="btn primary">Get Details</a>
+    </div>
+
+    <div class="event-card">
+      <div class="event-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="event-header">
+        <h3>Banda Bing</h3>
+        <span class="event-frequency">Saturday Nights</span>
+      </div>
+      <div class="event-details">
+        <p class="location"><i class="fas fa-map-marker-alt"></i> Kyaliwajjala Namugongo</p>
+        <p class="description">MAXMOND° headline performance. Premium party experience guaranteed! </p>
+      </div>
+      <a href="https://wa.me/256742141276?text=I%20want%20to%20book%20for%20Banda%20Bing" class="btn primary">Get Details</a>
+    </div>
+  </section>
+
+  <!-- Booking form -->
+  <section class="booking-section">
+    <div class="booking-header">
+      <h2 class="section-title">Reserve MAXMOND°</h2>
+      <p>Get the best DJ for your next event. Fill the form below to start the booking process.</p>
+    </div>
+
+    <form class="booking-form" action="https://api.web3forms.com/submit" method="POST">
+    
+      <input type="hidden" name="access_key" value="09df1529-83f0-40d9-add4-467459486802">
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <div class="input-wrapper">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrapper">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <div class="input-wrapper">
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="phone" name="phone" required placeholder="+256...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Event Date</label>
+          <div class="input-wrapper">
+            <i class="fas fa-calendar-alt"></i>
+            <input type="date" id="date" name="date" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="details">Event Details</label>
+        <div class="input-wrapper textarea-wrapper">
+          <i class="fas fa-file-alt"></i>
+          <textarea id="details" name="details" rows="5" placeholder="Venue type, event type, guest count, special requests..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn primary">Request Booking</button>
+    </form>
+  </section>
+</main>
+</main>
+
+
+<!-- WhatsApp floating chat bubble -->
+<a href="https://wa.me/256742141276" class="whatsapp-chat" target="_blank" rel="noopener">
+  <span class="whatsapp-bubble">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp" class="whatsapp-icon" />
+  </span>
+  <span class="whatsapp-label">Chat with us on WhatsApp</span>
+</a>
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <!-- Brand Section -->
+    <div class="footer-section">
+      <h3 class="footer-title">MAXMOND°</h3>
+      <p class="footer-desc">Party Psychiatrist — Healing dancefloors with premium music and unforgettable vibes.</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/maxmonddj256" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/maxmonddj256" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/maxmonddj256" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.tiktok.com/@maxmonddj256" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4 class="footer-heading">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="mixes.html">Mixes</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-section">
+      <h4 class="footer-heading">Services</h4>
+      <ul class="footer-links">
+        <li><a href="events.html">Book Event</a></li>
+        <li><a href="mixes.html">Listen Mixes</a></li>
+        <li><a href="merch.html">Get Merch</a></li>
+        <li><a href="https://wa.me/256742141276" target="_blank">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h4 class="footer-heading">Contact</h4>
+      <div class="footer-contact">
+        <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:maxmond@gmail.com">maxmond@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> <a href="https://wa.me/256742141276">+256 742 141 276</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> MAXMOND°. All rights reserved. | Party Psychiatrist</p>
+    <!-- <div class="footer-links-bottom">
+      <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+    </div> -->
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
