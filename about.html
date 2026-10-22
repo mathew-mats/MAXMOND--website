@@ -3,162 +3,252 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About MAXMOND° — DJ Profile</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>About MAXMOND° — DJ Profile | Party Psychiatrist</title>
+<meta name="description" content="Meet MAXMOND° — Ugandan DJ and mixing specialist from ASTRO TEENZ. 8+ years, 500+ events, expert in Amapiano, Afrobeats, Dancehall, EDM and more." />
+<meta name="theme-color" content="#07060d" />
+<link rel="icon" type="image/png" href="images/logo.png" />
+<link rel="shortcut icon" href="images/logo.png" />
+<link rel="apple-touch-icon" href="images/logo.png" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="About MAXMOND° — DJ Profile" />
+<meta property="og:description" content="The Party Psychiatrist: 8+ years healing dancefloors across East Africa." />
+<meta property="og:image" content="images/og.jpg" />
+<meta property="og:url" content="https://maxmonddj.com/about.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 <link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<header class="site-header">
-  <div class="brand">
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.png"  alt="Maxmond Logo" class="logo-img">
-      </a>
-    </div>
-    <div class="tag">Party Psychiatrist</div>
-  </div>
-  <button class="menu-btn" id="menuBtn">☰</button>
-  <nav class="nav" id="nav">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="index.html" aria-label="MAXMOND home">
+    <img src="images/logo.png" alt="MAXMOND logo" />
+    <span class="brand-tag">Party<br>Psychiatrist</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <a href="index.html" class="nav-link">Home</a>
     <a href="about.html" class="nav-link active">About</a>
     <a href="mixes.html" class="nav-link">Mixes</a>
     <a href="events.html" class="nav-link">Events</a>
     <a href="merch.html" class="nav-link">Merch</a>
+    <a href="events.html#book" class="btn btn-primary btn-sm nav-cta">Book Now</a>
   </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<main class="container">
-  <!-- ABOUT HERO -->
-  <section class="about-hero">
-    <div class="about-image-container">
-      <img src="images/about-dj.jpg" alt="DJ MAXMOND portrait" class="about-image">
+<section class="page-hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-bg" src="images/hero-placeholder.jpg" alt="" fetchpriority="high" decoding="async" />
+    <video class="hero-video" muted loop playsinline preload="none">
+      <source src="videos/hero-placeholder.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-scrim"></div>
+
+  <div class="container">
+    <span class="eyebrow">The Story</span>
+    <h1>About <span class="grad-text">MAXMOND°</span></h1>
+    <p>Ugandan DJ, mixing specialist and certified party psychiatrist...</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="split-media" data-reveal>
+      <img src="images/about-dj.jpg" alt="DJ MAXMOND portrait" loading="lazy" decoding="async" />
     </div>
-    <div class="about-text">
-      <h1 class="neon">About MAXMOND°</h1>
-      <p class="about-intro">Maxmond° is a Ugandan DJ and mixing specialist from ASTRO TEENZ based in Kampala, Uganda. With over 8 years of experience in the industry, he's mastered multiple genres and has become one of East Africa's most sought-after DJs.</p>
-      
-      <div class="about-content">
-        <h2>Musical Expertise</h2>
-        <p>Specializing in EDM, AFRO, DANCEHALL, HIPHOP, ELECTRO, HOUSE, R&B and more , MAXMOND° has earned the reputation of the "Party Psychiatrist" for his ability to heal dancefloors and create unforgettable experiences. Every mix, every set, every event is crafted with precision and passion.</p>
+    <div class="split-body" data-reveal style="--d:120ms">
+      <span class="eyebrow">Kampala · Uganda</span>
+      <h2>Reading crowds.<br><span class="grad-text">Healing dancefloors.</span></h2>
+      <p>
+        MAXMOND° is a Ugandan DJ and mixing specialist from <strong>ASTRO TEENZ</strong>, based in Kampala.
+        With over 8 years in the industry, he has mastered multiple genres and become one of
+        East Africa's most sought-after selectors.
+      </p>
+      <p>
+        Known as the <strong>Party Psychiatrist</strong>, his gift is diagnosing exactly what a room needs —
+        then prescribing the perfect blend of Amapiano, Afrobeats, Dancehall, EDM, Hip Hop, House and R&amp;B.
+      </p>
+      <div class="pills">
+        <span class="pill">EDM</span>
+        <span class="pill">Afro</span>
+        <span class="pill">Dancehall</span>
+        <span class="pill">Hip Hop</span>
+        <span class="pill">Electro</span>
+        <span class="pill">House</span>
+        <span class="pill">R&amp;B</span>
+        <span class="pill">Amapiano</span>
       </div>
-
-      <div class="about-content">
-        <h2>What Sets Him Apart</h2>
-        <ul class="about-list">
-          <li>Expert mixing and beat-matching across multiple genres</li>
-          <li>Professional sound engineering and production quality</li>
-          <li>5+ years of live event DJ experience</li>
-          <li>Custom mixes tailored to any event atmosphere</li>
-          <li>State-of-the-art equipment and technology</li>
-          <li>Proven track record with 500+ successful events</li>
-        </ul>
-      </div>
-
-      <div class="about-cta">
-        <a href="events.html" class="btn primary">Book MAXMOND°</a>
-        <a href="mixes.html" class="btn ghost">Listen to Mixes</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES SECTION -->
-  <section class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-compact-disc"></i>
-      </div>
-      <h3>Professional Mixing</h3>
-      <p>High-quality custom mixes for any occasion, styled to your preferences</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-microphone-alt"></i>
-      </div>
-      <h3>Live DJ Services</h3>
-      <p>Top-tier live DJ services for clubs, events, weddings, and private parties</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-sliders-h"></i>
-      </div>
-      <h3>Sound Engineering</h3>
-      <p>Complete audio setup and technical support for any venue size</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">
-        <i class="fas fa-headphones"></i>
-      </div>
-      <h3>Production Services</h3>
-      <p>Beat production and music production services available</p>
-    </div>
-  </section>
-
-</main>
-
-
-
-
-
-
-<footer class="site-footer">
-  <div class="footer-content">
-    <!-- Brand Section -->
-    <div class="footer-section">
-      <h3 class="footer-title">MAXMOND°</h3>
-      <p class="footer-desc">Party Psychiatrist — Healing dancefloors with premium music and unforgettable vibes.</p>
-      <div class="footer-socials">
-        <a href="https://facebook.com/maxmonddj256" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/maxmonddj256" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/maxmonddj256" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.tiktok.com/@maxmonddj256" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4 class="footer-heading">Quick Links</h4>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="mixes.html">Mixes</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="merch.html">Merch</a></li>
-      </ul>
-    </div>
-
-    <!-- Services -->
-    <div class="footer-section">
-      <h4 class="footer-heading">Services</h4>
-      <ul class="footer-links">
-        <li><a href="events.html">Book Event</a></li>
-        <li><a href="mixes.html">Listen Mixes</a></li>
-        <li><a href="merch.html">Get Merch</a></li>
-        <li><a href="https://wa.me/256742141276" target="_blank">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-section">
-      <h4 class="footer-heading">Contact</h4>
-      <div class="footer-contact">
-        <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:maxmond@gmail.com">maxmond@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> <a href="https://wa.me/256742141276">+256 742 141 276</a></p>
+      <div class="hero-actions" style="margin-top:34px">
+        <a class="btn btn-primary" href="events.html#book">Book MAXMOND°</a>
+        <a class="btn btn-ghost" href="mixes.html">Listen to Mixes</a>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Copyright -->
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> MAXMOND°. All rights reserved. | Party Psychiatrist</p>
-    <!-- <div class="footer-links-bottom">
-      <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="stats" data-reveal>
+      <div class="stat"><div class="stat-num" data-count="500" data-suffix="+">0+</div><div class="stat-label">Events Performed</div></div>
+      <div class="stat"><div class="stat-num" data-count="50" data-suffix="M+">0M+</div><div class="stat-label">Streams</div></div>
+      <div class="stat"><div class="stat-num" data-count="15" data-suffix="K+">0K+</div><div class="stat-label">Followers</div></div>
+      <div class="stat"><div class="stat-num" data-count="8" data-suffix="+">0+</div><div class="stat-label">Years Experience</div></div>
     </div>
-  </div> -->
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Why he stands out</span>
+      <h2>What sets <span class="grad-text">MAXMOND°</span> apart</h2>
+    </div>
+    <div class="split" style="align-items:start">
+      <div data-reveal>
+        <ul class="check-list" style="margin-top:0">
+          <li><i class="fas fa-circle-check"></i> Expert mixing and beat-matching across multiple genres</li>
+          <li><i class="fas fa-circle-check"></i> Professional sound engineering and production quality</li>
+          <li><i class="fas fa-circle-check"></i> Years of live event DJ experience across East Africa</li>
+          <li><i class="fas fa-circle-check"></i> Custom mixes tailored to any event atmosphere</li>
+          <li><i class="fas fa-circle-check"></i> State-of-the-art equipment and technology</li>
+          <li><i class="fas fa-circle-check"></i> Proven track record with 500+ successful events</li>
+        </ul>
+      </div>
+      <div data-reveal style="--d:120ms">
+        <p style="color:var(--muted);font-size:16px;line-height:1.8">
+          Every set is built from scratch. Before the doors open, MAXMOND° studies the room —
+          the age range, the energy, the occasion — and designs a journey that starts warm,
+          builds tension, and lands exactly where the crowd needs it.
+        </p>
+        <p style="color:var(--muted);font-size:16px;line-height:1.8;margin-top:18px">
+          That's the psychiatry part. The party part is what happens when the first drop hits.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow" style="justify-content:center">Services</span>
+      <h2>What MAXMOND° <span class="grad-text">delivers</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal>
+        <i class="fas fa-compact-disc" style="font-size:22px;color:var(--violet-b);display:block;margin-bottom:16px"></i>
+        <h3>Professional Mixing</h3>
+        <p>High-quality custom mixes for any occasion, styled to your exact preferences.</p>
+      </div>
+      <div class="step" data-reveal style="--d:90ms">
+        <i class="fas fa-microphone-lines" style="font-size:22px;color:var(--violet-b);display:block;margin-bottom:16px"></i>
+        <h3>Live DJ Services</h3>
+        <p>Top-tier live sets for clubs, events, weddings and private parties.</p>
+      </div>
+      <div class="step" data-reveal style="--d:180ms">
+        <i class="fas fa-sliders" style="font-size:22px;color:var(--violet-b);display:block;margin-bottom:16px"></i>
+        <h3>Sound Engineering</h3>
+        <p>Complete audio setup and technical support for any venue size.</p>
+      </div>
+    </div>
+    <div style="margin-top:20px" class="steps">
+      <div class="step" data-reveal>
+        <i class="fas fa-headphones" style="font-size:22px;color:var(--violet-b);display:block;margin-bottom:16px"></i>
+        <h3>Production</h3>
+        <p>Beat production and music production services for artists and brands.</p>
+      </div>
+      <div class="step" data-reveal style="--d:90ms">
+        <i class="fas fa-calendar-check" style="font-size:22px;color:var(--violet-b);display:block;margin-bottom:16px"></i>
+        <h3>Event Consulting</h3>
+        <p>Programming, run-of-show and entertainment planning for promoters.</p>
+      </div>
+      <div class="step" data-reveal style="--d:180ms">
+        <i class="fas fa-bolt" style="font-size:22px;color:var(--violet-b);display:block;margin-bottom:16px"></i>
+        <h3>Brand Activations</h3>
+        <p>Energy-driven sets for product launches, activations and corporate nights.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <span class="eyebrow" style="justify-content:center">Let's work</span>
+      <h2>Bring the <span class="grad-text">Party Psychiatrist</span> to your event</h2>
+      <p>Tell us the date, the venue and the vibe — we'll handle the rest.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="events.html#book"><i class="fas fa-calendar-check"></i> Request Booking</a>
+        <a class="btn btn-ghost" href="https://wa.me/256742141276" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="MAXMOND logo" class="footer-logo" loading="lazy" />
+        <p>Party Psychiatrist — healing dancefloors across East Africa with premium sound and unforgettable energy.</p>
+        <div class="socials">
+          <a href="https://facebook.com/maxmonddj256" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/maxmonddj256" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/maxmonddj256" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.tiktok.com/@maxmonddj256" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="mixes.html">Mixes</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="events.html#book">Book an Event</a></li>
+          <li><a href="mixes.html">Listen to Mixes</a></li>
+          <li><a href="merch.html">Get Merch</a></li>
+          <li><a href="https://wa.me/256742141276" target="_blank" rel="noopener">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-location-dot"></i><span>Kampala, Uganda</span></li>
+          <li><i class="fas fa-envelope"></i><a href="mailto:maxmond@gmail.com">maxmond@gmail.com</a></li>
+          <li><i class="fas fa-phone"></i><a href="https://wa.me/256742141276">+256 742 141 276</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2025</span> MAXMOND°. All rights reserved.</p>
+      <p>Kampala · Uganda — <span>Party Psychiatrist</span></p>
+    </div>
+  </div>
 </footer>
+
+<a href="https://wa.me/256742141276" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 8-1.4 1.4L13 7.8V20h-2V7.8l-5.6 5.6L4 12z"/></svg>
+</button>
 
 <script src="script.js"></script>
 </body>

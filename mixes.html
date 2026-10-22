@@ -3,347 +3,332 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mixes —  MAXMOND°</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Mixes — Listen & Download | MAXMOND°</title>
+<meta name="description" content="Stream and download every DJ MAXMOND° mixtape — Amapiano, Afrobeats, Dancehall, Hip Hop, Pop and slow jams. Free downloads, premium sound." />
+<meta name="theme-color" content="#07060d" />
+<link rel="icon" type="image/png" href="images/logo.png" />
+<link rel="shortcut icon" href="images/logo.png" />
+<link rel="apple-touch-icon" href="images/logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Mixes — Listen & Download | MAXMOND°" />
+<meta property="og:description" content="The complete MAXMOND° mixtape collection. Stream or download free." />
+<meta property="og:image" content="images/og.jpg" />
+<meta property="og:url" content="https://maxmonddj.com/mixes.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 <link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<header class="site-header">
-  <div class="brand">
-    <div class="logo">
-  <a href="index.html">
-        <img src="images/logo.png"  alt="Maxmond Logo" class="logo-img">
-      </a>
-</div>
-<div class="tag">Party Psychiatrist</div>
-  </div>
-  <button class="menu-btn" id="menuBtn">☰</button>
-  <nav class="nav" id="nav">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="index.html" aria-label="MAXMOND home">
+    <img src="images/logo.png" alt="MAXMOND logo" />
+    <span class="brand-tag">Party<br>Psychiatrist</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <a href="index.html" class="nav-link">Home</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="mixes.html" class="nav-link active">Mixes</a>
     <a href="events.html" class="nav-link">Events</a>
     <a href="merch.html" class="nav-link">Merch</a>
-    
+    <a href="events.html#book" class="btn btn-primary btn-sm nav-cta">Book Now</a>
   </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
+<section class="page-hero">
+  <div class="hero-media" aria-hidden="true">
+    <img class="hero-bg" src="images/hero-placeholder.jpg" alt="" fetchpriority="high" decoding="async" />
+    <video class="hero-video" muted loop playsinline preload="none">
+      <source src="videos/hero-placeholder.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-scrim"></div>
 
+  <div class="container">
+    <span class="eyebrow">The Story</span>
+    <h1>About <span class="grad-text">MAXMOND°</span></h1>
+    <p>Ugandan DJ, mixing specialist and certified party psychiatrist...</p>
+  </div>
+</section>
 
-<main class="container">
-  <section class="mixes-hero">
-    <div class="mixes-hero-content">
-      <h1 class="neon">All Mixes</h1>
-      <p class="hero-subtitle">Explore the complete collection of DJ MAXMOND° mixes. From Amapiano to EDM, find your vibe and download instantly.</p>
+<section class="section">
+  <div class="container">
+
+    <div class="chips" data-reveal>
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="amapiano">Amapiano</button>
+      <button class="chip" data-filter="afro">Afrobeats</button>
+      <button class="chip" data-filter="dancehall">Dancehall</button>
+      <button class="chip" data-filter="hiphop">Hip Hop</button>
+      <button class="chip" data-filter="pop">Pop</button>
+      <button class="chip" data-filter="slow">Slow Jams</button>
     </div>
-  </section>
 
-  <section class="mixes-intro">
-    <h2>Curated Collections</h2>
-    <p>Every mix is professionally produced with premium sound quality. Download, stream, or listen live.</p>
-  </section>
+    <div class="mix-grid">
 
-  <section class="featured-grid">
-    <!-- same structure as index, copy album-card with audio + equalizer -->
-    <article class="album-card">
-  <img class="album-cover" src="images/mix1.jpg" alt="Mix 1 cover">
-  <div class="album-info">
-    <h3>Amapiano Vibes 2025</h3>
-    <p class="meta">1:03:32 — DJ MAXMOND'S 'AMAPIANO VIBES' VOL.2 (BEST AMAPIANO SONGS 2024)</p>
-    <div class="album-controls">
-      <div class="equalizer-wrapper">
-        <audio controls preload="none">
-          <source src="https://www.dropbox.com/scl/fi/xc1sqs35vmgmtnmhbowbe/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.2-BEST-AMAPIANO-SONGS-2024.mp3?rlkey=he2ttho02ufio4cwqi1nv0g5d&st=pbbh3ozd&raw=1" type="audio/mpeg">
-          
-        </audio>
-        <div class="equalizer">
-          <span></span><span></span><span></span><span></span><span></span>
+      <!-- 1 -->
+      <article class="mix-card" data-genre="amapiano" data-reveal>
+        <div class="mix-cover">
+          <img src="images/mix1.jpg" alt="Amapiano Vibes Vol.2 cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Amapiano</span>
         </div>
-      </div>
+        <div class="mix-body">
+          <h3>Amapiano Vibes Vol.2</h3>
+          <p class="mix-meta">Best Amapiano Songs 2024</p>
+          <div class="player" data-src="https://www.dropbox.com/scl/fi/xc1sqs35vmgmtnmhbowbe/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.2-BEST-AMAPIANO-SONGS-2024.mp3?rlkey=he2ttho02ufio4cwqi1nv0g5d&st=pbbh3ozd&raw=1" data-dur="1:03:32">
+            <button class="player-play" type="button" aria-label="Play Amapiano Vibes Vol.2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <div class="player-main">
+              <div class="player-top"><span class="player-title">Amapiano Vibes Vol.2</span><span class="player-time"><span class="cur">0:00</span> / <span class="dur">1:03:32</span></span></div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
+            </div>
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/xc1sqs35vmgmtnmhbowbe/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.2-BEST-AMAPIANO-SONGS-2024.mp3?rlkey=he2ttho02ufio4cwqi1nv0g5d&st=pbbh3ozd&raw=1" download aria-label="Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg></a>
+          </div>
+        </div>
+      </article>
 
-      <!-- Download -->
-      <a class="download-btn" href="https://www.dropbox.com/scl/fi/xc1sqs35vmgmtnmhbowbe/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.2-BEST-AMAPIANO-SONGS-2024.mp3?rlkey=he2ttho02ufio4cwqi1nv0g5d&st=pbbh3ozd&raw=1" download>
-        Download
-      </a>
+      <!-- 2 -->
+      <article class="mix-card" data-genre="pop" data-reveal style="--d:60ms">
+        <div class="mix-cover">
+          <img src="images/pic 4.jpg" alt="Pop Oldies mixtape cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Pop</span>
+        </div>
+        <div class="mix-body">
+          <h3>Pop Oldies</h3>
+          <p class="mix-meta">MAXMOND — Pop Oldies Mixtape</p>
+          <div class="player" data-src="https://www.dropbox.com/scl/fi/2253mt208fvndfzl2ass7/MAXMOND-POP-OLDIES-MIXTAPE-demo.mp3?rlkey=nd7rowg3izl7b2zfqn1jg8y5y&st=6wo6x5c7&raw=1" data-dur="21:44">
+            <button class="player-play" type="button" aria-label="Play Pop Oldies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <div class="player-main">
+              <div class="player-top"><span class="player-title">Pop Oldies</span><span class="player-time"><span class="cur">0:00</span> / <span class="dur">21:44</span></span></div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
+            </div>
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/2253mt208fvndfzl2ass7/MAXMOND-POP-OLDIES-MIXTAPE-demo.mp3?rlkey=nd7rowg3izl7b2zfqn1jg8y5y&st=6wo6x5c7&raw=1" download aria-label="Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="mix-card" data-genre="dancehall" data-reveal style="--d:120ms">
+        <div class="mix-cover">
+          <img src="images/JAMAICAN DANCEHALL ALBUM DJ MAXMOND.jpg" alt="Dancehall Explosion cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Dancehall</span>
+        </div>
+        <div class="mix-body">
+          <h3>Dancehall Explosion</h3>
+          <p class="mix-meta">Jamaican Dancehall Affair 2017 &amp; Beyond</p>
+          <div class="player" data-src="https://www.dropbox.com/scl/fi/gc46w96b8jhmd17xgu9oz/DJ-Maxmond-s-Dancehall-Affair-2017-Beyond.mp3?rlkey=oaa48fzhy5w7obsttgqg2e1w3&st=un1a16tu&raw=1" data-dur="1:00:37">
+            <button class="player-play" type="button" aria-label="Play Dancehall Explosion"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <div class="player-main">
+              <div class="player-top"><span class="player-title">Dancehall Explosion</span><span class="player-time"><span class="cur">0:00</span> / <span class="dur">1:00:37</span></span></div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
+            </div>
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/gc46w96b8jhmd17xgu9oz/DJ-Maxmond-s-Dancehall-Affair-2017-Beyond.mp3?rlkey=oaa48fzhy5w7obsttgqg2e1w3&st=un1a16tu&raw=1" download aria-label="Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="mix-card" data-genre="amapiano" data-reveal>
+        <div class="mix-cover">
+          <img src="images/AMAPIANO COVER.jpg" alt="Amapiano Vibes Vol.1 cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Amapiano</span>
+        </div>
+        <div class="mix-body">
+          <h3>Amapiano Vibes Vol.1</h3>
+          <p class="mix-meta">Burna Boy · Goya Menor &amp; more</p>
+          <div class="player" data-src="https://www.dropbox.com/scl/fi/g57sjwwid92xmw1bhhezi/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.1-Burna-Boy-Goya-Menor.mp3?rlkey=ar28ouzfhbrpokca3kf854isd&st=fgia1n0p&raw=1" data-dur="1:00:20">
+            <button class="player-play" type="button" aria-label="Play Amapiano Vibes Vol.1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <div class="player-main">
+              <div class="player-top"><span class="player-title">Amapiano Vibes Vol.1</span><span class="player-time"><span class="cur">0:00</span> / <span class="dur">1:00:20</span></span></div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
+            </div>
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/g57sjwwid92xmw1bhhezi/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.1-Burna-Boy-Goya-Menor.mp3?rlkey=ar28ouzfhbrpokca3kf854isd&st=fgia1n0p&raw=1" download aria-label="Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="mix-card" data-genre="afro" data-reveal style="--d:60ms">
+        <div class="mix-cover">
+          <img src="images/about-dj.jpg" alt="African Bashment cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Afrobeats</span>
+        </div>
+        <div class="mix-body">
+          <h3>African Bashment</h3>
+          <p class="mix-meta">Fik Fameica · Alien Skin · Boutross · Mudra</p>
+          <div class="player" data-src="https://www.dropbox.com/scl/fi/metjsta6it0i8d0d69z3c/DJ-MAXMOND-AFRICAN-BASHMENT-MIX-2023-Fik-Fameica-Alien-Skin-Boutross-Mudra.mp3?rlkey=m5x4rvdq6e0x61zr8qu99kswv&st=e3wgdvi5&raw=1" data-dur="1:03:32">
+            <button class="player-play" type="button" aria-label="Play African Bashment"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <div class="player-main">
+              <div class="player-top"><span class="player-title">African Bashment</span><span class="player-time"><span class="cur">0:00</span> / <span class="dur">1:03:32</span></span></div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
+            </div>
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/metjsta6it0i8d0d69z3c/DJ-MAXMOND-AFRICAN-BASHMENT-MIX-2023-Fik-Fameica-Alien-Skin-Boutross-Mudra.mp3?rlkey=m5x4rvdq6e0x61zr8qu99kswv&st=e3wgdvi5&raw=1" download aria-label="Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="mix-card" data-genre="pop" data-reveal style="--d:120ms">
+        <div class="mix-cover">
+          <img src="images/pic 4.jpg" alt="Pop Vibes Vol.1 cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Pop</span>
+        </div>
+        <div class="mix-body">
+          <h3>Pop Vibes Vol.1</h3>
+          <p class="mix-meta">Sia · Anne-Marie &amp; more</p>
+          <div class="player" data-src="https://www.dropbox.com/scl/fi/nsy8dr8bvtbilteksl2qw/DJ-MAXMOND-S-POP-VIBES-VOL.1-Sia-Anne-Marie-_vrBwgUti2A.mp3?rlkey=s4eze54t4lyvu4ocfovp8t3r0&st=puht9hxf&raw=1" data-dur="1:00:20">
+            <button class="player-play" type="button" aria-label="Play Pop Vibes Vol.1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <div class="player-main">
+              <div class="player-top"><span class="player-title">Pop Vibes Vol.1</span><span class="player-time"><span class="cur">0:00</span> / <span class="dur">1:00:20</span></span></div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
+            </div>
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/nsy8dr8bvtbilteksl2qw/DJ-MAXMOND-S-POP-VIBES-VOL.1-Sia-Anne-Marie-_vrBwgUti2A.mp3?rlkey=s4eze54t4lyvu4ocfovp8t3r0&st=puht9hxf&raw=1" download aria-label="Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="mix-card" data-genre="slow" data-reveal>
+        <div class="mix-cover">
+          <img src="images/MAX.jpg" alt="Urban Meditation Slows cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Slow Jams</span>
+        </div>
+        <div class="mix-body">
+          <h3>Urban Meditation Slows</h3>
+          <p class="mix-meta">Late night slow jams mixtape</p>
+          <div class="player" data-src="https://www.dropbox.com/scl/fi/84fz49fuitprnxfow9ed5/URBAN-MEDITATION-SLOWS-MIXTAPE-DJ-MAXMOND.mp3?rlkey=z8jtzszey09qrq1zt6kzdnszs&st=jmrnwees&raw=1" data-dur="1:00:20">
+            <button class="player-play" type="button" aria-label="Play Urban Meditation Slows"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <div class="player-main">
+              <div class="player-top"><span class="player-title">Urban Meditation Slows</span><span class="player-time"><span class="cur">0:00</span> / <span class="dur">1:00:20</span></span></div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
+            </div>
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/84fz49fuitprnxfow9ed5/URBAN-MEDITATION-SLOWS-MIXTAPE-DJ-MAXMOND.mp3?rlkey=z8jtzszey09qrq1zt6kzdnszs&st=jmrnwees&raw=1" download aria-label="Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="mix-card" data-genre="hiphop" data-reveal style="--d:60ms">
+        <div class="mix-cover">
+          <img src="images/MAX.jpg" alt="Urban Hiphop Vol.1 cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Hip Hop</span>
+        </div>
+        <div class="mix-body">
+          <h3>Urban Hiphop Vol.1</h3>
+          <p class="mix-meta">Chris Brown · Rihanna · Mustard · Tyga</p>
+          <div class="player" data-src="https://www.dropbox.com/scl/fi/ctdm7llapai2txvomfgfx/URBAN-HIPHOP-vol.1-mix-Chris-Brown-_-Rihanna-Mustard-_Tyga-More-Dj-maxmond.mp3?rlkey=4qazkdi8gggblucui3o29qjom&st=hhebjg76&raw=1" data-dur="53:41">
+            <button class="player-play" type="button" aria-label="Play Urban Hiphop Vol.1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <div class="player-main">
+              <div class="player-top"><span class="player-title">Urban Hiphop Vol.1</span><span class="player-time"><span class="cur">0:00</span> / <span class="dur">53:41</span></span></div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
+            </div>
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/ctdm7llapai2txvomfgfx/URBAN-HIPHOP-vol.1-mix-Chris-Brown-_-Rihanna-Mustard-_Tyga-More-Dj-maxmond.mp3?rlkey=4qazkdi8gggblucui3o29qjom&st=hhebjg76&raw=1" download aria-label="Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="mix-card" data-genre="afro" data-reveal style="--d:120ms">
+        <div class="mix-cover">
+          <img src="images/MAX.jpg" alt="Afro Bangers Mixtape Vol.1 cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Afrobeats</span>
+        </div>
+        <div class="mix-body">
+          <h3>Afro Bangers Vol.1</h3>
+          <p class="mix-meta">70+ Ugandan &amp; African bangers · 2025</p>
+          <div class="player" data-src="https://www.dropbox.com/scl/fi/jmvxrvj6paymeug45j4h5/AFRO-BANGERS-MIXTAPE-VOL.1-2025-70-UG.-MAXMONDmp3.mp3.mpeg?rlkey=gkuji4uifnu17vnlhvzsygefr&raw=1" data-dur="53:41">
+            <button class="player-play" type="button" aria-label="Play Afro Bangers Vol.1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            <div class="player-main">
+              <div class="player-top"><span class="player-title">Afro Bangers Vol.1</span><span class="player-time"><span class="cur">0:00</span> / <span class="dur">53:41</span></span></div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
+            </div>
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/jmvxrvj6paymeug45j4h5/AFRO-BANGERS-MIXTAPE-VOL.1-2025-70-UG.-MAXMONDmp3.mp3.mpeg?rlkey=gkuji4uifnu17vnlhvzsygefr&dl=1" download aria-label="Download"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg></a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
-</article>
+</section>
 
-    
-
-    <article class="album-card">
-      <img class="album-cover" src="images/pic 4.jpg" alt="Mix 2 cover">
-      <div class="album-info">
-        <h3>Pop Oldies</h3>
-        <p class="meta">21:44 — MAXMOND- POP OLDIES MIXTAPE demo</p>
-        <div class="album-controls">
-          <div class="equalizer-wrapper">
-            <audio controls preload="none">
-          <source src="https://www.dropbox.com/scl/fi/2253mt208fvndfzl2ass7/MAXMOND-POP-OLDIES-MIXTAPE-demo.mp3?rlkey=nd7rowg3izl7b2zfqn1jg8y5y&st=6wo6x5c7&raw=1" type="audio/mpeg">
-          
-        </audio>
-        <div class="equalizer">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <span class="eyebrow" style="justify-content:center">Want a custom mix?</span>
+      <h2>Get a mix built <span class="grad-text">for your event</span></h2>
+      <p>Wedding, birthday, corporate night or club residency — MAXMOND° builds a bespoke soundtrack around your crowd.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="events.html#book"><i class="fas fa-calendar-check"></i> Request a Booking</a>
+        <a class="btn btn-ghost" href="https://wa.me/256742141276" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
-
-      <!-- Download -->
-      <a class="download-btn" href="https://www.dropbox.com/scl/fi/2253mt208fvndfzl2ass7/MAXMOND-POP-OLDIES-MIXTAPE-demo.mp3?rlkey=nd7rowg3izl7b2zfqn1jg8y5y&st=6wo6x5c7&raw=1" download>
-        Download
-      </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="album-card">
-      <img class="album-cover" src="images/JAMAICAN DANCEHALL ALBUM DJ MAXMOND.jpg" alt="Mix 2 cover">
-      <div class="album-info">
-        <h3>Dancehall Explosion</h3>
-        <p class="meta">1:00:37 — JAMAICAN DANCEHALL AFFAIR 2017 & BEYOND</p>
-        <div class="album-controls">
-          <div class="equalizer-wrapper">
-            <!-- Audio player -->
-        <audio controls preload="none">
-          <source src="https://www.dropbox.com/scl/fi/gc46w96b8jhmd17xgu9oz/DJ-Maxmond-s-Dancehall-Affair-2017-Beyond.mp3?rlkey=oaa48fzhy5w7obsttgqg2e1w3&st=un1a16tu&raw=1" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <div class="equalizer">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <!-- Download -->
-      <a class="download-btn" href="https://www.dropbox.com/scl/fi/gc46w96b8jhmd17xgu9oz/DJ-Maxmond-s-Dancehall-Affair-2017-Beyond.mp3?rlkey=oaa48fzhy5w7obsttgqg2e1w3&st=un1a16tu&raw=1" download>
-        Download
-      </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="album-card">
-      <img class="album-cover" src="images/AMAPIANO COVER.jpg" alt="Mix 2 cover">
-      <div class="album-info">
-        <h3>Mapiano Vibes vol.1</h3>
-        <p class="meta">1:00:20 — MAXMOND'S🇿🇦AMAPIANO VIBES VOL.1</p>
-        <div class="album-controls">
-          <div class="equalizer-wrapper">
-            <!-- Audio player -->
-        <audio controls preload="none">
-          <source src="https://www.dropbox.com/scl/fi/g57sjwwid92xmw1bhhezi/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.1-Burna-Boy-Goya-Menor.mp3?rlkey=ar28ouzfhbrpokca3kf854isd&st=fgia1n0p&raw=1" type="audio/mpeg">
-          
-        </audio>
-        <div class="equalizer">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <!-- Download -->
-      <a class="download-btn" href="https://www.dropbox.com/scl/fi/g57sjwwid92xmw1bhhezi/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.1-Burna-Boy-Goya-Menor.mp3?rlkey=ar28ouzfhbrpokca3kf854isd&st=fgia1n0p&raw=1" download>
-        Download
-      </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="album-card">
-  <img class="album-cover" src="images/about-dj.jpg" alt="Mix 2 cover">
-  <div class="album-info">
-    <h3>African Bashment</h3>
-    <p class="meta">1:03:32 — DJ MAXMOND AFRICAN BASHMENT MIX 2023</p>
-    <div class="album-controls">
-      <div class="equalizer-wrapper">
-        <!-- Audio player -->
-        <audio controls preload="none">
-          <source src="https://www.dropbox.com/scl/fi/metjsta6it0i8d0d69z3c/DJ-MAXMOND-AFRICAN-BASHMENT-MIX-2023-Fik-Fameica-Alien-Skin-Boutross-Mudra.mp3?rlkey=m5x4rvdq6e0x61zr8qu99kswv&st=e3wgdvi5&raw=1" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <div class="equalizer">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <!-- Download -->
-      <a class="download-btn" href="https://www.dropbox.com/scl/fi/metjsta6it0i8d0d69z3c/DJ-MAXMOND-AFRICAN-BASHMENT-MIX-2023-Fik-Fameica-Alien-Skin-Boutross-Mudra.mp3?rlkey=m5x4rvdq6e0x61zr8qu99kswv&st=e3wgdvi5&raw=1" download>
-        Download
-      </a>
     </div>
   </div>
-</article>
-
-    </article>
-
-    <article class="album-card">
-      <img class="album-cover" src="images/pic 4.jpg" alt="Mix 2 cover">
-      <div class="album-info">
-        <h3>Pop Vibes vol.1</h3>
-        <p class="meta">1:00:20 — DJ MAXMOND'S POP VIBES VOL.1</p>
-        <div class="album-controls">
-          <div class="equalizer-wrapper">
-            <audio controls preload="none">
-          <source src="https://www.dropbox.com/scl/fi/nsy8dr8bvtbilteksl2qw/DJ-MAXMOND-S-POP-VIBES-VOL.1-Sia-Anne-Marie-_vrBwgUti2A.mp3?rlkey=s4eze54t4lyvu4ocfovp8t3r0&st=puht9hxf&raw=1" type="audio/mpeg">
-          
-        </audio>
-        <div class="equalizer">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <!-- Download -->
-      <a class="download-btn" href="https://www.dropbox.com/scl/fi/nsy8dr8bvtbilteksl2qw/DJ-MAXMOND-S-POP-VIBES-VOL.1-Sia-Anne-Marie-_vrBwgUti2A.mp3?rlkey=s4eze54t4lyvu4ocfovp8t3r0&st=puht9hxf&raw=1" download>
-        Download
-      </a>
-        </div>
-      </div>
-    </article>
-
-    
-    <article class="album-card">
-      <img class="album-cover" src="images/MAX.jpg" alt="Mix 2 cover">
-      <div class="album-info">
-        <h3>Urban Meditation Slows Mixtape</h3>
-        <p class="meta">1:00:20 — DJ MAXMOND'S URBAN MEDITATION SLOWS MIXTAPE</p>
-        <div class="album-controls">
-          <div class="equalizer-wrapper">
-            <audio controls preload="none">
-          <source src="https://www.dropbox.com/scl/fi/84fz49fuitprnxfow9ed5/URBAN-MEDITATION-SLOWS-MIXTAPE-DJ-MAXMOND.mp3?rlkey=z8jtzszey09qrq1zt6kzdnszs&st=jmrnwees&raw=1" type="audio/mpeg">
-          
-        </audio>
-        <div class="equalizer">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <!-- Download -->
-      <a class="download-btn" href="https://www.dropbox.com/scl/fi/84fz49fuitprnxfow9ed5/URBAN-MEDITATION-SLOWS-MIXTAPE-DJ-MAXMOND.mp3?rlkey=z8jtzszey09qrq1zt6kzdnszs&st=jmrnwees&raw=1" download>
-        Download
-      </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="album-card">
-      <img class="album-cover" src="images/MAX.jpg" alt="Mix 2 cover">
-      <div class="album-info">
-        <h3>Urban Hiphop vol.1</h3>
-        <p class="meta">53:41 — DJ MAXMOND'S URBAN HIPHOP VOL.1</p>
-        <div class="album-controls">
-          <div class="equalizer-wrapper">
-            <audio controls preload="none">
-          <source src="https://www.dropbox.com/scl/fi/ctdm7llapai2txvomfgfx/URBAN-HIPHOP-vol.1-mix-Chris-Brown-_-Rihanna-Mustard-_Tyga-More-Dj-maxmond.mp3?rlkey=4qazkdi8gggblucui3o29qjom&st=hhebjg76&raw=1" type="audio/mpeg">
-          
-        </audio>
-        <div class="equalizer">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <!-- Download -->
-      <a class="download-btn" href="https://www.dropbox.com/scl/fi/ctdm7llapai2txvomfgfx/URBAN-HIPHOP-vol.1-mix-Chris-Brown-_-Rihanna-Mustard-_Tyga-More-Dj-maxmond.mp3?rlkey=4qazkdi8gggblucui3o29qjom&st=hhebjg76&raw=1" download>
-        Download
-      </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="album-card">
-      <img class="album-cover" src="images/MAX.jpg" alt="Mix 2 cover">
-      <div class="album-info">
-        <h3>Afro Bangers Mixtape vol.1</h3>
-        <p class="meta">53:41 — DJ MAXMOND'S AFRO-BANGERS-MIXTAPE-VOL.1</p>
-        <div class="album-controls">
-          <div class="equalizer-wrapper">
-            <audio controls>
-  <source src="https://www.dropbox.com/scl/fi/jmvxrvj6paymeug45j4h5/AFRO-BANGERS-MIXTAPE-VOL.1-2025-70-UG.-MAXMONDmp3.mp3.mpeg?rlkey=gkuji4uifnu17vnlhvzsygefr&raw=1" type="audio/mpeg">
-</audio>
-        <div class="equalizer">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <!-- Download -->
-      <a class="download-btn"
-   href="https://www.dropbox.com/scl/fi/jmvxrvj6paymeug45j4h5/AFRO-BANGERS-MIXTAPE-VOL.1-2025-70-UG.-MAXMONDmp3.mp3.mpeg?rlkey=gkuji4uifnu17vnlhvzsygefr&dl=1">
-   Download
-</a>
-        </div>
-      </div>
-    </article>
-  </section>
-</main>
-
-
-
+</section>
 
 <footer class="site-footer">
-  <div class="footer-content">
-    <!-- Brand Section -->
-    <div class="footer-section">
-      <h3 class="footer-title">MAXMOND°</h3>
-      <p class="footer-desc">Party Psychiatrist — Healing dancefloors with premium music and unforgettable vibes.</p>
-      <div class="footer-socials">
-        <a href="https://facebook.com/maxmonddj256" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/maxmonddj256" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/maxmonddj256" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.tiktok.com/@maxmonddj256" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="MAXMOND logo" class="footer-logo" loading="lazy" />
+        <p>Party Psychiatrist — healing dancefloors across East Africa with premium sound and unforgettable energy.</p>
+        <div class="socials">
+          <a href="https://facebook.com/maxmonddj256" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/maxmonddj256" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/maxmonddj256" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.tiktok.com/@maxmonddj256" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="mixes.html">Mixes</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="events.html#book">Book an Event</a></li>
+          <li><a href="mixes.html">Listen to Mixes</a></li>
+          <li><a href="merch.html">Get Merch</a></li>
+          <li><a href="https://wa.me/256742141276" target="_blank" rel="noopener">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-location-dot"></i><span>Kampala, Uganda</span></li>
+          <li><i class="fas fa-envelope"></i><a href="mailto:maxmond@gmail.com">maxmond@gmail.com</a></li>
+          <li><i class="fas fa-phone"></i><a href="https://wa.me/256742141276">+256 742 141 276</a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4 class="footer-heading">Quick Links</h4>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="mixes.html">Mixes</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="merch.html">Merch</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2025</span> MAXMOND°. All rights reserved.</p>
+      <p>Kampala · Uganda — <span>Party Psychiatrist</span></p>
     </div>
-
-    <!-- Services -->
-    <div class="footer-section">
-      <h4 class="footer-heading">Services</h4>
-      <ul class="footer-links">
-        <li><a href="events.html">Book Event</a></li>
-        <li><a href="mixes.html">Listen Mixes</a></li>
-        <li><a href="merch.html">Get Merch</a></li>
-        <li><a href="https://wa.me/256742141276" target="_blank">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-section">
-      <h4 class="footer-heading">Contact</h4>
-      <div class="footer-contact">
-        <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:maxmond@gmail.com">maxmond@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> <a href="https://wa.me/256742141276">+256 742 141 276</a></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Copyright -->
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> MAXMOND°. All rights reserved. | Party Psychiatrist</p>
-    <!-- <div class="footer-links-bottom">
-      <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
-    </div> -->
   </div>
 </footer>
 
+<a href="https://wa.me/256742141276" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 8-1.4 1.4L13 7.8V20h-2V7.8l-5.6 5.6L4 12z"/></svg>
+</button>
+
 <script src="script.js"></script>
-<script>
-document.addEventListener("play", function(e){
-    const audios = document.querySelectorAll("audio");
-
-    audios.forEach(audio => {
-        if(audio !== e.target){
-            audio.pause();
-            audio.currentTime = 0; 
-        }
-    });
-}, true);
-</script>
-
 </body>
 </html>

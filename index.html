@@ -3,225 +3,371 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title> MAXMOND° — DJ & Mixing Specialist</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>MAXMOND° — DJ & Mixing Specialist | Party Psychiatrist, Kampala</title>
+<meta name="description" content="MAXMOND° — Uganda's Party Psychiatrist. Amapiano, Afrobeats, Dancehall and EDM mixes, live DJ bookings and exclusive merch. 500+ events, 8+ years on the decks." />
+<meta name="theme-color" content="#07060d" />
+<meta name="author" content="MAXMOND°" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png" />
+<link rel="shortcut icon" href="images/logo.png" />
+<link rel="apple-touch-icon" href="images/logo.png" />
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="MAXMOND°" />
+<meta property="og:title" content="MAXMOND° — Party Psychiatrist | DJ & Mixing Specialist" />
+<meta property="og:description" content="Healing dancefloors across East Africa. Amapiano, Afrobeats, Dancehall & EDM. Book MAXMOND° for your next event." />
+<meta property="og:image" content="images/og.jpg" />
+<meta property="og:url" content="https://maxmonddj.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MAXMOND° — Party Psychiatrist" />
+<meta name="twitter:description" content="DJ & Mixing Specialist based in Kampala, Uganda." />
+<meta name="twitter:image" content="images/og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 <link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "MAXMOND°",
+  "alternateName": "DJ Maxmond",
+  "genre": ["Amapiano","Afrobeats","Dancehall","EDM","Hip Hop","House"],
+  "description": "Ugandan DJ and mixing specialist known as the Party Psychiatrist.",
+  "url": "https://maxmonddj.com/",
+  "logo": "images/logo.png",
+  "image": "images/og.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "Kampala", "addressCountry": "UG" },
+  "email": "maxmond@gmail.com",
+  "telephone": "+256742141276",
+  "sameAs": [
+    "https://facebook.com/maxmonddj256",
+    "https://instagram.com/maxmonddj256",
+    "https://x.com/maxmonddj256",
+    "https://www.tiktok.com/@maxmonddj256"
+  ]
+}
+</script>
 </head>
 <body>
-<header class="site-header">
-  <div class="brand">
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.png"  alt="Maxmond Logo" class="logo-img">
-      </a>
-    </div>
-    <div class="tag">Party Psychiatrist</div>
-  </div>
-  <button class="menu-btn" id="menuBtn">☰</button>
-  <nav class="nav" id="nav">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="index.html" aria-label="MAXMOND home">
+    <img src="images/logo.png" alt="MAXMOND logo" />
+    <span class="brand-tag">Party<br>Psychiatrist</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <a href="index.html" class="nav-link active">Home</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="mixes.html" class="nav-link">Mixes</a>
     <a href="events.html" class="nav-link">Events</a>
     <a href="merch.html" class="nav-link">Merch</a>
+    <a href="events.html#book" class="btn btn-primary btn-sm nav-cta">Book Now</a>
   </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<!-- HERO VIDEO -->
-<section class="hero-vid">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="videos/hero-placeholder.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="neon"> MAXMOND°</h1>
-    <p class="neon-sub">Party Psychiatrist — Healing dancefloors since day one</p>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-media">
+    <video autoplay muted loop playsinline poster="images/hero-placeholder.jpg">
+      <source src="videos/hero-placeholder.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-eq" id="heroEq" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <span class="eyebrow">Kampala · Uganda — Est. 2016</span>
+    <h1 class="hero-title">MAXMOND<span class="deg">°</span></h1>
+    <p class="hero-sub">
+      The Party Psychiatrist. Healing dancefloors with Amapiano, Afrobeats,
+      Dancehall and EDM — one unforgettable set at a time.
+    </p>
     <div class="hero-actions">
-      <a class="btn primary" href="mixes.html">Listen & Download</a>
-      <a class="btn ghost" href="events.html">Book for Event</a>
+      <a class="btn btn-primary" href="mixes.html">
+        <i class="fas fa-headphones"></i> Listen to Mixes
+      </a>
+      <a class="btn btn-ghost" href="events.html#book">
+        <i class="fas fa-calendar-check"></i> Book MAXMOND°
+      </a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>500+</strong><span>Events Played</span></div>
+      <div><strong>50M+</strong><span>Streams</span></div>
+      <div><strong>8+</strong><span>Years on Decks</span></div>
+      <div><strong>15K+</strong><span>Followers</span></div>
     </div>
   </div>
 </section>
 
-<!-- SLIDESHOW SECTION -->
-<section class="slideshow-section">
-  <div class="slideshow" id="slideshow">
-    <div class="slide" style="background-image:url('images/slide1.jpg')"></div>
-    <div class="slide" style="background-image:url('images/slide2.jpg')"></div>
-    <div class="slide" style="background-image:url('images/slide3.jpg')"></div>
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span>Amapiano</span><span>Afrobeats</span><span>Dancehall</span><span>EDM</span>
+      <span>Hip Hop</span><span>House</span><span>R&amp;B</span><span>Afro House</span>
+    </div>
+    <div class="marquee-group">
+      <span>Amapiano</span><span>Afrobeats</span><span>Dancehall</span><span>EDM</span>
+      <span>Hip Hop</span><span>House</span><span>R&amp;B</span><span>Afro House</span>
+    </div>
   </div>
-  <div class="slideshow-content">
-    <h2>Raw Energy & Live Vibes</h2>
-    <p>Bringing the heat to every venue 🔥</p>
-  </div>
-</section>
+</div>
 
-<!-- FEATURED MIXES -->
-<main class="container">
-  <section class="featured-section">
-    <h2 style="color:var(--neon-bright);font-size:36px;margin-bottom:40px;text-align:center;letter-spacing:1px;">Latest Mixes</h2>
-    <div class="featured-grid">
-      <article class="album-card">
-        <img class="album-cover" src="images/mix1.jpg" alt="Mix 1 cover">
-        <div class="album-info">
-          <h3>Amapiano Vibes 2025</h3>
-          <p class="meta">1:03:32 — DJ MAXMOND'S 'AMAPIANO VIBES' VOL.2</p>
-          <div class="album-controls">
-            <div class="equalizer-wrapper">
-              <audio controls preload="none">
-                <source src="https://www.dropbox.com/scl/fi/xc1sqs35vmgmtnmhbowbe/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.2-BEST-AMAPIANO-SONGS-2024.mp3?rlkey=he2ttho02ufio4cwqi1nv0g5d&st=pbbh3ozd&raw=1" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-              <div class="equalizer">
-                <span></span><span></span><span></span><span></span><span></span>
+<!-- ================= FEATURED MIXES ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Fresh off the decks</span>
+      <h2>Latest <span class="grad-text">Mixes</span></h2>
+      <p>Professionally mixed, mastered and free to download. Press play and let the party psychiatrist do the rest.</p>
+    </div>
+
+    <div class="mix-grid">
+
+      <!-- Mix 1 -->
+      <article class="mix-card" data-reveal>
+        <div class="mix-cover">
+          <img src="images/mix1.jpg" alt="Amapiano Vibes Vol.2 cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Amapiano</span>
+        </div>
+        <div class="mix-body">
+          <h3>Amapiano Vibes Vol.2</h3>
+          <p class="mix-meta">Best Amapiano Songs 2024</p>
+          <div class="player"
+               data-src="https://www.dropbox.com/scl/fi/xc1sqs35vmgmtnmhbowbe/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.2-BEST-AMAPIANO-SONGS-2024.mp3?rlkey=he2ttho02ufio4cwqi1nv0g5d&st=pbbh3ozd&raw=1"
+               data-dur="1:03:32">
+            <button class="player-play" type="button" aria-label="Play Amapiano Vibes Vol.2">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="player-main">
+              <div class="player-top">
+                <span class="player-title">Amapiano Vibes Vol.2</span>
+                <span class="player-time"><span class="cur">0:00</span> / <span class="dur">1:03:32</span></span>
               </div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
             </div>
-            <a class="download-btn" href="https://www.dropbox.com/scl/fi/xc1sqs35vmgmtnmhbowbe/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.2-BEST-AMAPIANO-SONGS-2024.mp3?rlkey=he2ttho02ufio4cwqi1nv0g5d&st=pbbh3ozd&raw=1" download>
-              <i class="fas fa-download"></i> Download
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/xc1sqs35vmgmtnmhbowbe/DJ-MAXMOND-S-AMAPIANO-VIBES-VOL.2-BEST-AMAPIANO-SONGS-2024.mp3?rlkey=he2ttho02ufio4cwqi1nv0g5d&st=pbbh3ozd&raw=1" download aria-label="Download Amapiano Vibes Vol.2">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg>
             </a>
           </div>
         </div>
       </article>
 
-      <article class="album-card">
-        <img class="album-cover" src="images/pic 4.jpg" alt="Mix 2 cover">
-        <div class="album-info">
+      <!-- Mix 2 -->
+      <article class="mix-card" data-reveal style="--d:90ms">
+        <div class="mix-cover">
+          <img src="images/pic 4.jpg" alt="Pop Oldies mixtape cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Pop</span>
+        </div>
+        <div class="mix-body">
           <h3>Pop Oldies</h3>
-          <p class="meta">21:44 — MAXMOND- POP OLDIES MIXTAPE</p>
-          <div class="album-controls">
-            <div class="equalizer-wrapper">
-              <audio controls preload="none">
-                <source src="https://www.dropbox.com/scl/fi/2253mt208fvndfzl2ass7/MAXMOND-POP-OLDIES-MIXTAPE-demo.mp3?rlkey=nd7rowg3izl7b2zfqn1jg8y5y&st=6wo6x5c7&raw=1" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-              <div class="equalizer">
-                <span></span><span></span><span></span><span></span><span></span>
+          <p class="mix-meta">MAXMOND — Pop Oldies Mixtape</p>
+          <div class="player"
+               data-src="https://www.dropbox.com/scl/fi/2253mt208fvndfzl2ass7/MAXMOND-POP-OLDIES-MIXTAPE-demo.mp3?rlkey=nd7rowg3izl7b2zfqn1jg8y5y&st=6wo6x5c7&raw=1"
+               data-dur="21:44">
+            <button class="player-play" type="button" aria-label="Play Pop Oldies">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="player-main">
+              <div class="player-top">
+                <span class="player-title">Pop Oldies</span>
+                <span class="player-time"><span class="cur">0:00</span> / <span class="dur">21:44</span></span>
               </div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
             </div>
-            <a class="download-btn" href="https://www.dropbox.com/scl/fi/2253mt208fvndfzl2ass7/MAXMOND-POP-OLDIES-MIXTAPE-demo.mp3?rlkey=nd7rowg3izl7b2zfqn1jg8y5y&st=6wo6x5c7&raw=1" download>
-              <i class="fas fa-download"></i> Download
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/2253mt208fvndfzl2ass7/MAXMOND-POP-OLDIES-MIXTAPE-demo.mp3?rlkey=nd7rowg3izl7b2zfqn1jg8y5y&st=6wo6x5c7&raw=1" download aria-label="Download Pop Oldies">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg>
             </a>
           </div>
         </div>
       </article>
 
-      <article class="album-card">
-        <img class="album-cover" src="images/JAMAICAN DANCEHALL ALBUM DJ MAXMOND.jpg" alt="Mix 3 cover">
-        <div class="album-info">
+      <!-- Mix 3 -->
+      <article class="mix-card" data-reveal style="--d:180ms">
+        <div class="mix-cover">
+          <img src="images/JAMAICAN DANCEHALL ALBUM DJ MAXMOND.jpg" alt="Dancehall Explosion cover art" loading="lazy" decoding="async" />
+          <span class="mix-tag">Dancehall</span>
+        </div>
+        <div class="mix-body">
           <h3>Dancehall Explosion</h3>
-          <p class="meta">1:00:37 — JAMAICAN DANCEHALL AFFAIR 2017 & BEYOND</p>
-          <div class="album-controls">
-            <div class="equalizer-wrapper">
-              <audio controls preload="none">
-                <source src="https://www.dropbox.com/scl/fi/gc46w96b8jhmd17xgu9oz/DJ-Maxmond-s-Dancehall-Affair-2017-Beyond.mp3?rlkey=oaa48fzhy5w7obsttgqg2e1w3&st=un1a16tu&raw=1" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-              <div class="equalizer">
-                <span></span><span></span><span></span><span></span><span></span>
+          <p class="mix-meta">Jamaican Dancehall Affair 2017 &amp; Beyond</p>
+          <div class="player"
+               data-src="https://www.dropbox.com/scl/fi/gc46w96b8jhmd17xgu9oz/DJ-Maxmond-s-Dancehall-Affair-2017-Beyond.mp3?rlkey=oaa48fzhy5w7obsttgqg2e1w3&st=un1a16tu&raw=1"
+               data-dur="1:00:37">
+            <button class="player-play" type="button" aria-label="Play Dancehall Explosion">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="player-main">
+              <div class="player-top">
+                <span class="player-title">Dancehall Explosion</span>
+                <span class="player-time"><span class="cur">0:00</span> / <span class="dur">1:00:37</span></span>
               </div>
+              <div class="player-bar" tabindex="0" aria-label="Seek"><div class="player-fill"></div></div>
             </div>
-            <a class="download-btn" href="https://www.dropbox.com/scl/fi/gc46w96b8jhmd17xgu9oz/DJ-Maxmond-s-Dancehall-Affair-2017-Beyond.mp3?rlkey=oaa48fzhy5w7obsttgqg2e1w3&st=un1a16tu&raw=1" download>
-              <i class="fas fa-download"></i> Download
+            <a class="player-dl" href="https://www.dropbox.com/scl/fi/gc46w96b8jhmd17xgu9oz/DJ-Maxmond-s-Dancehall-Affair-2017-Beyond.mp3?rlkey=oaa48fzhy5w7obsttgqg2e1w3&st=un1a16tu&raw=1" download aria-label="Download Dancehall Explosion">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11l4-4 1.4 1.4L12 17l-5.4-5.6L8 10l4 4V3zM5 19h14v2H5z"/></svg>
             </a>
           </div>
         </div>
       </article>
-    </div>
-  </section>
 
-  <!-- STATS SECTION -->
-  <section class="stats-section">
-    <div class="stat">
-      <div class="stat-number">500+</div>
-      <div class="stat-label">Events Performed</div>
     </div>
-    <div class="stat">
-      <div class="stat-number">50M+</div>
-      <div class="stat-label">Streams</div>
+
+    <div style="text-align:center;margin-top:44px" data-reveal>
+      <a class="btn btn-ghost" href="mixes.html">Browse all mixes <i class="fas fa-arrow-right"></i></a>
     </div>
-    <div class="stat">
-      <div class="stat-number">15K+</div>
-      <div class="stat-label">Followers</div>
+  </div>
+</section>
+
+<!-- ================= ABOUT TEASER ================= -->
+<section class="section" style="padding-top:0">
+  <div class="container split">
+    <div class="split-media" data-reveal>
+      <img src="images/about-dj.jpg" alt="DJ MAXMOND performing live" loading="lazy" decoding="async" />
     </div>
-    <div class="stat">
-      <div class="stat-number">8+</div>
-      <div class="stat-label">Years Experience</div>
-    </div>
-  </section>
-
-</main>
-
-
-
-<footer class="site-footer">
-  <div class="footer-content">
-    <!-- Brand Section -->
-    <div class="footer-section">
-      <h3 class="footer-title">MAXMOND°</h3>
-      <p class="footer-desc">Party Psychiatrist — Healing dancefloors with premium music and unforgettable vibes.</p>
-      <div class="footer-socials">
-        <a href="https://facebook.com/maxmonddj256" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/maxmonddj256" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/maxmonddj256" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.tiktok.com/@maxmonddj256" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    <div class="split-body" data-reveal style="--d:120ms">
+      <span class="eyebrow">The man behind the decks</span>
+      <h2>More than a DJ.<br><span class="grad-text">A party psychiatrist.</span></h2>
+      <p>
+        From ASTRO TEENZ to the biggest stages in Kampala, MAXMOND° has spent 8+ years
+        reading crowds, healing dancefloors and turning ordinary nights into stories
+        people retell for years.
+      </p>
+      <ul class="check-list">
+        <li><i class="fas fa-circle-check"></i> Expert beat-matching across 6+ genres</li>
+        <li><i class="fas fa-circle-check"></i> Professional sound engineering &amp; production</li>
+        <li><i class="fas fa-circle-check"></i> Custom sets tailored to your crowd</li>
+        <li><i class="fas fa-circle-check"></i> 500+ successful events and counting</li>
+      </ul>
+      <div class="pills">
+        <span class="pill">Amapiano</span>
+        <span class="pill">Afrobeats</span>
+        <span class="pill">Dancehall</span>
+        <span class="pill">EDM</span>
+        <span class="pill">Hip Hop</span>
+        <span class="pill">House</span>
       </div>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4 class="footer-heading">Quick Links</h4>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="mixes.html">Mixes</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="merch.html">Merch</a></li>
-      </ul>
-    </div>
-
-    <!-- Services -->
-    <div class="footer-section">
-      <h4 class="footer-heading">Services</h4>
-      <ul class="footer-links">
-        <li><a href="events.html">Book Event</a></li>
-        <li><a href="mixes.html">Listen Mixes</a></li>
-        <li><a href="merch.html">Get Merch</a></li>
-        <li><a href="https://wa.me/256742141276" target="_blank">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-section">
-      <h4 class="footer-heading">Contact</h4>
-      <div class="footer-contact">
-        <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:maxmond@gmail.com">maxmond@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> <a href="https://wa.me/256742141276">+256 742 141 276</a></p>
+      <div class="hero-actions" style="margin-top:34px">
+        <a class="btn btn-primary" href="about.html">Meet MAXMOND°</a>
+        <a class="btn btn-ghost" href="events.html">See Events</a>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Copyright -->
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> MAXMOND°. All rights reserved. | Party Psychiatrist</p>
-    <!-- <div class="footer-links-bottom">
-      <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
-    </div> -->
+<!-- ================= STATS ================= -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="stats" data-reveal>
+      <div class="stat">
+        <div class="stat-num" data-count="500" data-suffix="+">0+</div>
+        <div class="stat-label">Events Performed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-count="50" data-suffix="M+">0M+</div>
+        <div class="stat-label">Streams</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-count="15" data-suffix="K+">0K+</div>
+        <div class="stat-label">Followers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-count="8" data-suffix="+">0+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <span class="eyebrow" style="justify-content:center">Now booking</span>
+      <h2>Ready to turn your event<br>into a <span class="grad-text">night to remember?</span></h2>
+      <p>Clubs, weddings, corporate nights, private parties — if it needs a soundtrack, MAXMOND° delivers.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="events.html#book"><i class="fas fa-calendar-check"></i> Request Booking</a>
+        <a class="btn btn-ghost" href="https://wa.me/256742141276" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="MAXMOND logo" class="footer-logo" loading="lazy" />
+        <p>Party Psychiatrist — healing dancefloors across East Africa with premium sound and unforgettable energy.</p>
+        <div class="socials">
+          <a href="https://facebook.com/maxmonddj256" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/maxmonddj256" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/maxmonddj256" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.tiktok.com/@maxmonddj256" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="mixes.html">Mixes</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="events.html#book">Book an Event</a></li>
+          <li><a href="mixes.html">Listen to Mixes</a></li>
+          <li><a href="merch.html">Get Merch</a></li>
+          <li><a href="https://wa.me/256742141276" target="_blank" rel="noopener">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-location-dot"></i><span>Kampala, Uganda</span></li>
+          <li><i class="fas fa-envelope"></i><a href="mailto:maxmond@gmail.com">maxmond@gmail.com</a></li>
+          <li><i class="fas fa-phone"></i><a href="https://wa.me/256742141276">+256 742 141 276</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2025</span> MAXMOND°. All rights reserved.</p>
+      <p>Kampala · Uganda — <span>Party Psychiatrist</span></p>
+    </div>
   </div>
 </footer>
 
+<a href="https://wa.me/256742141276" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
 
-
-      
-
-    
-    
-
-    
-  
-
-
-
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 8-1.4 1.4L13 7.8V20h-2V7.8l-5.6 5.6L4 12z"/></svg>
+</button>
 
 <script src="script.js"></script>
 </body>
