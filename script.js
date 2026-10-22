@@ -20,31 +20,41 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* Mobile drawer */
-  const menuBtn = $('#menuBtn');
-  const nav = $('#nav');
+/* Mobile drawer + backdrop */
+const menuBtn = $('#menuBtn');
+const nav = $('#nav');
+
+if (menuBtn && nav) {
+  // Create backdrop once
+  const backdrop = document.createElement('div');
+  backdrop.className = 'nav-backdrop';
+  document.body.appendChild(backdrop);
+
+  const openNav = () => {
+    nav.classList.add('open');
+    menuBtn.classList.add('active');
+    backdrop.classList.add('show');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('nav-open');
+  };
+
   const closeNav = () => {
-    if (!nav || !menuBtn) return;
     nav.classList.remove('open');
     menuBtn.classList.remove('active');
+    backdrop.classList.remove('show');
     menuBtn.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('nav-open');
   };
-  if (menuBtn && nav) {
-    menuBtn.addEventListener('click', e => {
-      e.stopPropagation();
-      const open = nav.classList.toggle('open');
-      menuBtn.classList.toggle('active', open);
-      menuBtn.setAttribute('aria-expanded', String(open));
-      document.body.classList.toggle('nav-open', open);
-    });
-    $$('.nav-link, .nav-cta').forEach(a => a.addEventListener('click', closeNav));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
-    document.addEventListener('click', e => {
-      if (!nav.classList.contains('open')) return;
-      if (!nav.contains(e.target) && !menuBtn.contains(e.target)) closeNav();
-    });
-  }
+
+  menuBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    nav.classList.contains('open') ? closeNav() : openNav();
+  });
+
+  backdrop.addEventListener('click', closeNav);
+  $$('.nav-link, .nav-cta').forEach(a => a.addEventListener('click', closeNav));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+}
 
   /* Year */
   const yearEl = $('#year');
