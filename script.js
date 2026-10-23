@@ -241,3 +241,71 @@ if (menuBtn && nav) {
   const toTop = $('#toTop');
   if (toTop) toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 })();
+
+  /* ---------- AJAX Form Submission (Web3Forms) ---------- */
+  const bookingForm = $('.booking-form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', async function(e) {
+      e.preventDefault(); // Stops the redirect
+      
+      const btn = this.querySelector('button[type="submit"]');
+      const msgDiv = $('#formMessage');
+      const originalBtnHTML = btn.innerHTML;
+      
+      // Loading State
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      btn.style.opacity = '0.8';
+      btn.disabled = true;
+      if (msgDiv) msgDiv.style.display = 'none';
+      
+      // Send Data
+      const formData = new FormData(this);
+      try {
+        const response = await fetch(this.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        
+        if (response.ok) {
+          // Success State
+          btn.innerHTML = '<i class="fas fa-check"></i> Request Sent!';
+          btn.style.background = 'linear-gradient(110deg, #22d3ee, #10b981)'; // Cyan to Green
+          
+          if (msgDiv) {
+            msgDiv.innerHTML = 'Thank you! MAXMOND° will get back to you shortly.';
+            msgDiv.style.color = '#22d3ee';
+            msgDiv.style.display = 'block';
+          }
+          
+          this.reset();
+          
+          setTimeout(() => {
+            btn.innerHTML = originalBtnHTML;
+            btn.style.background = '';
+            btn.style.opacity = '1';
+            btn.disabled = false;
+          }, 4000);
+          
+        } else {
+          throw new Error('Form failed');
+        }
+      } catch (error) {
+        // Error State
+        btn.innerHTML = '<i class="fas fa-triangle-exclamation"></i> Error. Try again.';
+        btn.style.background = '#ef4444'; // Red
+        btn.disabled = false;
+        
+        if (msgDiv) {
+          msgDiv.innerHTML = 'Something went wrong. Please try again or message us on WhatsApp.';
+          msgDiv.style.color = '#ef4444';
+          msgDiv.style.display = 'block';
+        }
+        
+        setTimeout(() => {
+          btn.innerHTML = originalBtnHTML;
+          btn.style.background = '';
+        }, 4000);
+      }
+    });
+  }
